@@ -3,7 +3,8 @@ import { fetchThreadById } from '@/lib/actions/thread.actions';
 import { fetchUser } from '@/lib/actions/user.actions';
 import { currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
-import { Key } from 'react';
+
+export const revalidate = 0;
 
 const CommentPage = async ({
   params: { id },
