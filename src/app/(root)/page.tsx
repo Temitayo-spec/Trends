@@ -13,7 +13,7 @@ export default async function Home({
   if (!user) return null;
 
   const userInfo = await fetchUser(user.id);
-  if (!userInfo?.onboarded) redirect('/onboarding');
+  if (!userInfo?.onBoarded) redirect('/onboarding');
 
   const result = await fetchPosts(
     searchParams.page ? +searchParams.page : 1,

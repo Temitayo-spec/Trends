@@ -11,7 +11,7 @@ const Onboarding = async () => {
   } // to avoid typescript warnings
 
   const userInfo = await fetchUser(user.id);
-  if (userInfo?.onboarded) redirect('/');
+  if (userInfo?.onBoarded) redirect('/');
 
   const userData = {
     id: user.id,
