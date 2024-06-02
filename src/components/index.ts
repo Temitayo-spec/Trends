@@ -5,3 +5,6 @@ export { default as RightSidebar } from './Common/RightSidebar';
 export { default as AccountProfile } from './Forms/AccountProfile';
 export { default as PostThread } from './Forms/PostThread';
 export { default as ThreadCard } from './Cards/ThreadCard';
+export { default as Comment } from './Forms/Comment';
+export { default as ProfileHeader } from './Common/ProfileHeader';
+export { default as ThreadsTab } from './Common/ThreadsTab';

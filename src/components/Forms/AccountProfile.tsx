@@ -10,7 +10,6 @@ import profile_svg from '../../../public/assets/profile.svg';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
