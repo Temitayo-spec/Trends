@@ -10,7 +10,10 @@ export default async function Home({
   searchParams: { [key: string]: string | undefined };
 }) {
   const user = await currentUser();
-  if (!user) return null;
+  if (!user) {
+    redirect('/sign-in');
+    return null;
+  }
 
   const userInfo = await fetchUser(user.id);
   if (!userInfo?.onBoarded) redirect('/onboarding');
