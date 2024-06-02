@@ -3,10 +3,12 @@ import { currentUser } from '@clerk/nextjs/server';
 import { fetchUser } from '@/lib/actions/user.actions';
 import { redirect } from 'next/navigation';
 
-
 const Onboarding = async () => {
   const user = await currentUser();
-  if (!user) return null; // to avoid typescript warnings
+  if (!user) {
+    redirect('/sign-in');
+    return null;
+  } // to avoid typescript warnings
 
   const userInfo = await fetchUser(user.id);
   if (userInfo?.onboarded) redirect('/');
