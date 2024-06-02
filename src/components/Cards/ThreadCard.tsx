@@ -13,9 +13,9 @@ interface Props {
   parentId: string | null;
   content: string;
   author: {
-    id: string;
     name: string;
     image: string;
+    id: string;
   };
   community: {
     id: string;
@@ -26,7 +26,7 @@ interface Props {
   comments: {
     author: {
       image: string;
-    }[];
+    };
   }[];
   isComment?: boolean;
 }
