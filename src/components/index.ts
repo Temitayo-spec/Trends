@@ -8,3 +8,4 @@ export { default as ThreadCard } from './Cards/ThreadCard';
 export { default as Comment } from './Forms/Comment';
 export { default as ProfileHeader } from './Common/ProfileHeader';
 export { default as ThreadsTab } from './Common/ThreadsTab';
+export { default as UserCard } from './Cards/UserCard';
