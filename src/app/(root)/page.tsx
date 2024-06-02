@@ -1,4 +1,5 @@
 import { ThreadCard } from '@/components';
+import Pagination from '@/components/Common/Pagination';
 import { fetchPosts } from '@/lib/actions/thread.actions';
 import { fetchUser } from '@/lib/actions/user.actions';
 import { currentUser } from '@clerk/nextjs/server';
@@ -48,6 +49,11 @@ export default async function Home({
           </>
         )}
       </section>
+      <Pagination
+        path="/"
+        pageNumber={searchParams?.page ? +searchParams.page : 1}
+        isNext={result.isNext}
+      />
     </main>
   );
 }
